@@ -2,14 +2,18 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Login from "./COMPONENTS/login";
+import Profile from "./COMPONENTS/profile";
+import UserContextProvider from "./context/UserContextProvider";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <h1 className="bg-red-200">mini context</h1>
-    </>
+    <UserContextProvider>
+      <Login />
+      <Profile />
+    </UserContextProvider>
   );
 }
 
